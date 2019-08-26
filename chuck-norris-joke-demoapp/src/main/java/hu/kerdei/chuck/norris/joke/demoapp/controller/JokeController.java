@@ -1,16 +1,16 @@
 package hu.kerdei.chuck.norris.joke.demoapp.controller;
 
 import hu.kerdei.chuck.norris.joke.demoapp.service.JokeService;
-import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-@AllArgsConstructor
+@RequiredArgsConstructor
 @Controller
 public class JokeController {
 
-    JokeService jokeServiceImpl;
+    final JokeService jokeServiceImpl;
 
     @RequestMapping("/")
     public String getJoke(Model model) {

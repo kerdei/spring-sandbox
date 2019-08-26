@@ -1,14 +1,14 @@
 package hu.kerdei.chuck.norris.joke.demoapp.service;
 
 import guru.springframework.norris.chuck.ChuckNorrisQuotes;
-import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
-@AllArgsConstructor
+@RequiredArgsConstructor
 @Service
 public class JokeServiceImpl implements JokeService {
 
-    ChuckNorrisQuotes chuckNorrisQuotes;
+    final ChuckNorrisQuotes chuckNorrisQuotes;
 
     public String getChuckNorrisJoke() {
         return chuckNorrisQuotes.getRandomQuote();
